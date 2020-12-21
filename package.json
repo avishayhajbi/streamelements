@@ -1,0 +1,31 @@
+{
+  "name": "streamelements",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc && node ./index.ts",
+    "start": "node ./dist/index.js",
+    "fetchData": "node ./dist/utils/fetcher.js",
+    "fetcher": "ts-node ./utils/fetcher.ts",
+    "debug": "nodemon -e ts ./index.ts",
+    "dev": "nodemon -e ts -w ./dist -x npm run watch:serve",
+    "watch:serve": "ts-node --inspect ./index.ts"
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "moment": "^2.29.1",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.11.8",
+    "morgan": "~1.9.1",
+    "redis": "^3.0.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.1",
+    "nodemon": "^2.0.6",
+    "tslint": "^5.12.1",
+    "typescript": "^3.3.3"
+  }
+}
